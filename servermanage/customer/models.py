@@ -12,6 +12,9 @@ class Customer(models.Model):
     country = models.CharField(maxlength=150, blank=True)
     website = models.URLField(blank=True)
     email = models.EmailField(blank=True)
+    
+    def __str__(self):
+        return f'{user}'
 
     class Admin:
         list_filter   = ('area_code', 'country')
